@@ -1,0 +1,108 @@
+.fixedHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 2;
+  font-family: var(--font);
+  font-size: 20px;
+}
+
+.relativeHeader{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 2;
+  font-family: var(--font);
+  font-size: 20px;
+}
+
+.logo {
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.logo img {
+  width: 200px;
+  height: 180px;
+}
+
+.menu {
+  padding: 0px;
+  flex-grow: 8;
+}
+
+.text {
+  flex-grow: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  line-height: 30px;
+  padding: 0 20px; /* Ajuste para tornar o texto mais responsivo */
+  font-family: "Anton", sans-serif;
+}
+
+.text .call {
+  color: rgb(169, 57, 1);
+  font-size: 1.1em; /* Ajuste para tornar o tamanho do texto mais responsivo */
+  font-weight: bolder;
+  width: 100%;
+}
+
+.text .number {
+  font-size: 1.5em; /* Ajuste para tornar o tamanho do texto mais responsivo */
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+/* Regra de mídia para dispositivos com largura máxima de 768 pixels (tipicamente dispositivos móveis) */
+@media (max-width: 375px){
+  .text{
+    display: none;
+  }
+}
+
+@media (min-width: 585px) and (max-width: 1261px){
+  .text{
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .logo {
+    width: 160px;
+    height: 180px;
+  }
+  
+  .text {
+    padding: 0;
+    line-height: 1.5; /* Ajuste para tornar o espaço entre as linhas mais adequado para dispositivos móveis */
+  }
+  
+  .text .call,
+  .text .number {
+    font-size: 1em; /* Ajuste para tornar o tamanho do texto mais responsivo */
+  }
+}

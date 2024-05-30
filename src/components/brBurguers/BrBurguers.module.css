@@ -1,0 +1,17 @@
+.photos{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.photos img{
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: bisque;
+  
+}

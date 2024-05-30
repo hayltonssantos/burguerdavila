@@ -1,0 +1,12 @@
+html {
+  background-color: rgba(0,0,0,1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+  
+}
+
+body{
+  margin: 0;
+}

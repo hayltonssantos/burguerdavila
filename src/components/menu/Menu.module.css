@@ -1,0 +1,47 @@
+.ulMenu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+  font-size: 16px; /* Ajustando o tamanho da fonte para dispositivos móveis */
+}
+
+.liMenu {
+  display: flex;
+  justify-content: center;
+  width: 120px; /* Alterando a largura para ocupar 100% do espaço disponível */
+  margin: 10px; /* Ajustando as margens para dispositivos móveis */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.liMenu a {
+  color: aliceblue;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+.liMenu:first-child {
+  background-color: #849C16;
+}
+
+.liMenu:first-child:hover,
+.liMenu:hover {
+  background-color: rgb(36, 77, 19);
+}
+
+/* Regra de mídia para dispositivos com largura máxima de 768 pixels (tipicamente dispositivos móveis) */
+@media (max-width: 768px) {
+  .liMenu {
+    width: auto; /* Definindo a largura de volta para automático */
+    margin: 5px; /* Ajustando as margens para dispositivos móveis */
+  }
+}

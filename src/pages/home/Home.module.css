@@ -1,0 +1,133 @@
+/* Estilos para a página inicial */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 55vh;
+  width: 90vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para o título */
+.title {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Organiza os filhos verticalmente */
+  justify-content: center; 
+  align-items: center;
+  line-height: 1; 
+}
+
+.text, .text2 {
+  flex-basis: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 12vw; /* Tamanho do texto ajustado para dispositivos móveis */
+  font-weight: bold;
+  letter-spacing: 1vw; /* Espaçamento entre as letras ajustado para dispositivos móveis */
+  height: 100%;
+  opacity: 0;
+  animation: fadeInText 1s forwards;
+}
+.desclittleTitle{
+  width: 100%;
+  padding-top: 120px;
+}
+.littleTitle{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.desc {
+  font-size: 4vw; /* Tamanho do texto ajustado para dispositivos móveis */
+  opacity: 0;
+  animation: fadeInText 1s forwards;
+}
+
+/* Estilos para a div da imagem */
+.divImg {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Estilos para a imagem */
+.img {
+  max-width: 70%; /* Alterado para ocupar 100% do espaço disponível */
+  max-height: auto; /* Permitindo a altura ajustável conforme a largura da imagem */
+  -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.156));
+}
+
+.topBurguers {
+  width: 90vw;
+  padding-top: 120px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.topBurguer {
+  flex-grow: 1; /* Todos os itens crescerão de maneira igual */
+  flex-shrink: 1; /* Todos os itens encolherão de maneira igual */
+  width: 30%; /* Largura inicial */
+  min-width: 150px; /* Largura mínima */
+  margin: 10px;
+  background-color: aqua;
+  padding: 10px;
+}
+
+.topBurguers img {
+  width: 150px;
+  height: auto;
+}
+
+/* Animação para fazer o texto aparecer letra por letra */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Regra de mídia para dispositivos com largura máxima de 768 pixels (tipicamente dispositivos móveis) */
+@media (max-width: 768px) {
+  .text {
+    font-size: 8vw; /* Reduzindo o tamanho do texto para dispositivos móveis */
+    letter-spacing: 1vw; /* Espaçamento entre as letras ajustado para dispositivos móveis */
+  }
+  
+  .desc {
+    font-size: 3vw; /* Reduzindo o tamanho do texto para dispositivos móveis */
+  }
+}
+
+@media (min-width: 430px){
+  .text{
+    font-size: 5em;
+  }
+  .img{
+    
+  }
+}

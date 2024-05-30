@@ -1,0 +1,48 @@
+.topBurguers {
+  max-width: 300px;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.topBurguers:hover {
+  transform: translateY(-5px);
+}
+
+.topBurguers img {
+  width: 178px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.topBurguers h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #e8e8e8;
+}
+
+.topBurguers ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.topBurguers li {
+  margin-bottom: 10px;
+  color: #afafaf;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.topBurguers li:last-child {
+  margin-bottom: 0;
+}
