@@ -13,9 +13,9 @@ export default function Menu(){
       <li className={styles.liMenu}>
         <a href="home#topburguers" className={styles.a}>Top Burguers</a>
       </li>
-      <li className={styles.liMenu}>
+{/*       <li className={styles.liMenu}>
         <a href="home#brburguers" className={styles.a}>Burguers Br</a>
-      </li>
+      </li> */}
       <li className={styles.liMenu}>
         <a href="https://maps.google.com/maps?ll=39.268917,-9.16261&z=17&t=m&hl=pt-BR&gl=US&mapclient=embed&cid=6022707666166689307" className={styles.a}>Maps</a>
       </li>

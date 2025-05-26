@@ -1,35 +1,56 @@
-import React, { useContext, useState } from "react";
-import Header from '../../components/header/Header'
+import React, { useContext, useState, useEffect } from "react";
+import Header from '../../components/header/Header';
 import Cards from "../../components/cards/Cards";
-import styles from './Foods.module.css'
+import styles from './Foods.module.css';
 import { HamburguersContext } from "../../context/hamburguers";
 
-export default function Foods(){
-  const {foods} = useContext(HamburguersContext)
-  return(
-      <div>
-        <Header header={'relativeHeader'}/>
-        
-        <div className={styles.allCards}>
-          <h1>Cárdapio Burguer</h1>
-          <div className={styles.cardsBox}> 
-            {foods.map((food) => parseInt(food.id) <= 4 ? <Cards key={food.id} food={food} idPhoto={food.id}/> : null)}
-          </div>
-        </div>
+export default function Foods() {
+  const { foods } = useContext(HamburguersContext);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-        <div className={styles.allCards}>
-           <h1>Gourmet Simple</h1>
-          <div className={styles.cardsBox}> 
-            {foods.map((food) => parseInt(food.id) >= 5 && parseInt(food.id) <= 9 ? <Cards key={food.id} food={food} idPhoto={food.id} /> : null)}
-          </div>
-        </div>
-          
-        <div className={styles.allCards}>
-          <h1>Gourmet</h1>
-          <div className={styles.cardsBox}> 
-            {foods.map((food) => parseInt(food.id) >= 10 && parseInt(food.id) <= 14 ? <Cards key={food.id} food={food} idPhoto={food.id} /> : null)}
-          </div>
+  useEffect(() => {
+    if (foods) {
+      setLoading(false);
+    }
+  }, [foods]);
+
+  if (loading) {
+    return (
+      <div>
+        <Header />
+        <div className={styles.cardsBox}>
+          <h1>Carregando nossos deliciosos hambúrguers...</h1>
         </div>
       </div>
-  )
+    );
+  }
+
+  if (error) {
+    return (
+      <div>
+        <Header />
+        <div className={styles.cardsBox}>
+          <h1>Ops! Algo deu errado</h1>
+          <p>Não foi possível carregar o cardápio. Tente novamente.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <Header />
+      <div className={styles.cardsBox}>
+        <h1>Nosso Cardápio</h1>
+        <div className={styles.allCards}>
+          {foods && foods.length > 0 ? (
+            foods.map((food)=><Cards key={food.id} food={food}/>)
+          ) : (
+            <p>Nenhum hambúrguer disponível no momento.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }

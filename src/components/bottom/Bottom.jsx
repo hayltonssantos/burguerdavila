@@ -23,7 +23,7 @@ export default function Bottom(){
         <h3>LOJA FISICA - Avenida Dr Joaquim de Albuquerque, n40 B - Bombarral</h3>
       </div>
       <div className={styles.more}>
-      Contacto - 933 115 425
+      Contacto - 963 733 935
       </div>
     </bottom>
   )

@@ -39,6 +39,9 @@ export default function DescFood() {
           <h2>{selectionFood.desc}</h2>
           <h3>{selectionFood.price}€</h3>
         </aside>
+        <button className={styles.btn}>
+          <a href="/buynow">BUY NOW</a>
+        </button>
       </section>
     </div>
   )

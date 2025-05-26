@@ -55,12 +55,12 @@ export default function Home() {
           ]}
         />
       </div>
-      <div id='brburguers'>
+      {/* <div id='brburguers'>
         <div className={styles.desclittleTitle}>
           <h3 className={styles.littleTitle}>Top Burguers</h3>
         </div>
         <BrBurguers/>
-      </div>
+      </div> */}
       <Bottom/> 
     </div>
   )
